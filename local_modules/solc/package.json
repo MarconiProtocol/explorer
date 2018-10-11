@@ -16,7 +16,7 @@
     "url": "git+https://github.com/elaineo/solc-js.git"
   },
   "keywords": [
-    "ethereum",
+    "marconi",
     "solidity",
     "compiler"
   ],

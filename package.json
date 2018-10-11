@@ -1,10 +1,8 @@
 {
-  "name": "EthereumClassicExplorer",
+  "name": "MarconiExplorer",
   "private": false,
   "version": "0.2.0",
-  "description": "A lightweight ethereum classic block explorer",
-  "repository": "https://github.com/ethereumproject/explorer",
-  "license": "MIT",
+  "description": "A lightweight Marconi block explorer",
   "scripts": {
     "start": "concurrently \"node tools/sync.js \" \"node app.js\" ",
     "pretest": "copyfiles app.js app/  ",
@@ -27,7 +25,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "copyfiles": "^1.2.0",
-    "ethereumjs-testrpc": "^6.0.3",
+    "ganache-cli": "^6.2.5",
     "mocha": "^4.1.0",
     "request": "^2.83.0"
   }

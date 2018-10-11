@@ -2,8 +2,8 @@
 <simple-summary-stats></simple-summary-stats>
 <!-- summary-stats></summary-stats -->
 
-<div class="row">
-    <div class="col-md-6 col-sm-6">
+<div class="row"> 
+    <div class="col-md-6 col-sm-6 padding-lt">
         <!-- BEGIN PORTLET-->
         <div class="portlet light">
             <div class="portlet-title">
@@ -28,9 +28,10 @@
                                 <i class="fa fa-hourglass-o"></i>{{t.timestamp | timeDuration }} ago</span>
                         </div>
                         <div class="todo-tasklist-controls col-sm-7">
-                            <div class="todo-tasklist-item-text"><a href="/addr/{{t.miner}}">{{t.extraData}}</a><br>
-                            by <a href="/addr/{{t.miner}}">{{t.miner}}</a><br>
-                            {{t.txn}} txns
+                            <div class="todo-tasklist-item-text">Mined by <a href="/addr/{{t.miner}}">{{t.miner}}</a><br>
+ {{t.txn}} txns <!--in 30 secs <br> Block Reward 3.62663 Marcos-->
+                            <!--<a href="/addr/{{t.miner}}">{{t.miner}}</a>-->
+                           
                             </div>
                         </div>
                     </div>
@@ -41,7 +42,7 @@
     </div>
     <div class="col-md-6 col-sm-6" >
         <!-- BEGIN PORTLET-->
-        <div class="portlet light">
+        <div class="portlet transactions light">
             <div class="portlet-title">
                 <div class="caption caption-md">
                     <i class="icon-bar-chart font-red"></i>

@@ -9,7 +9,7 @@ text.shadow {
 }
 
 path {
-    stroke: steelblue;
+    stroke: #2a4d8c;
     stroke-width: 1;
     fill: none;
 }
@@ -32,7 +32,7 @@ path {
 }
 
 .area {
-    fill: lightsteelblue;
+    fill: #2a4d8c;
     stroke-width: 0;
 }
 
@@ -45,12 +45,12 @@ path {
     fill: none;
     stroke: steelblue;
 }
-
-    path.slice{
-        stroke-width:2px;
-        stroke: #3a3a3a;
-        opacity: .7;
-    }
+path.slice {
+    stroke-width: 2px;
+    stroke: steelblue;
+    opacity: 1;
+    fill: lightsteelblue ;
+}
 
     polyline{
         opacity: .3;

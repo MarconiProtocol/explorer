@@ -1,50 +1,55 @@
 <!-- BEGIN PRE-FOOTER -->
-<div class="page-prefooter">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-                <h2>About</h2>
-                <p> {{settings.about}} </p>
-                <span ng-bind-html="settings.poweredbyCustom" ng-if="settings.poweredbyCustom">{{settings.poweredbyCustom}}</span>
-                <span ng-if="!settings.poweredbyCustom && settings.poweredbyEtcImage"><a href="https://github.com/ethereumproject/explorer" target="_blank"><img height="51px" src="{{settings.poweredbyEtcImage}}"></a></span>
-                <p ng-if="!settings.poweredbyCustom && !settings.poweredbyEtcImage && settings.poweredbyEtc"> Powered by <a href="https://github.com/ethereumproject/explorer" target="_blank">ETC Explorer</a> </p>
+<footer class="footer-section blue-bg col-xs-12 no-padding" data-ce-key="225">
+    <section class="container" data-ce-key="226">
+      <div class="row" data-ce-key="227">
+        <div class="footer-box col-xs-12 text-center footer-box-home" data-ce-key="228">
+          <div class="col-md-10 col-md-push-2" data-ce-key="229">
+<div class="col-xs-12 col-md-offset-3 col-md-3 footer-links align-right" data-ce-key="250">
+              <ul class="row border-none" data-ce-key="251">
+                <li class="col-xs-12 link-head" data-ce-key="252"><b data-ce-key="253">Community</b></li>
+                <li class="col-xs-12 clickable twitter" data-ce-key="254"><a href="https://twitter.com/marconiprotocol" data-ce-key="255">Twitter</a></li>
+                <li class="col-xs-12 clickable mail" data-ce-key="256"><a class="transparent-btn btn1 joinBtn trackBtn-3" href="https://www.marconi.org/?mailinglist=1" data-toggle="modal" data-ce-key="257">Mailing List</a></li>
+                <li class="col-xs-12 clickable contact" data-ce-key="258"><a href="mailto:hello@marconi.org" data-ce-key="259">Contact</a></li>
+              </ul>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-                <h2>Follow Us On</h2>
-                <ul class="social-icons">
-                    <li>
-                        <a ng-show="settings.rss" href="{{settings.rss}}" data-original-title="rss" class="rss"></a>
-                    </li>
-                    <li>
-                        <a ng-show="settings.reddit" href="{{settings.reddit}}" data-original-title="reddit" class="reddit"></a>
-                    </li>
-                    <li>
-                        <a ng-show="settings.twitter" href="{{settings.twitter}}" data-original-title="twitter" class="twitter"></a>
-                    </li>
-                    <li>
-                        <a ng-show="settings.github" href="{{settings.github}}" data-original-title="github" class="github"></a>
-                    </li>
-                    <li>
-                        <a ng-show="settings.linkedin" href="{{settings.linkedin}}" data-original-title="linkedin" class="linkedin"></a>
-                    </li>
-                </ul>
+<div class="col-xs-12 col-md-3 footer-links align-right" data-ce-key="240">
+              <ul class="row" data-ce-key="241">
+                <li class="col-xs-12 link-head" data-ce-key="242"><b data-ce-key="243">Technology</b></li>
+                <li class="col-xs-12 clickable" data-ce-key="244"><a href="https://docsend.com/view/5zragmb" data-ce-key="245">White Paper</a></li>
+                <li class="col-xs-12 clickable" data-ce-key="246"><a href="https://medium.com/marconiprotocol" data-ce-key="247">Blog</a></li>
+                <li class="col-xs-12 clickable" data-ce-key="248"><a href="https://github.com/MarconiProtocol/wiki/wiki" data-ce-key="249">Github</a></li>
+                <li class="col-xs-12 clickable" data-ce-key="265"><a href="https://explorer.testnet.marconi.org/home" data-ce-key="266">Explorer</a></li>
+              </ul>
             </div>
-            <div ng-show="settings.symbol == 'ETC'" class="col-md-6 col-sm-12 col-xs-12 footer-block">
-                <h2>Help, it's Broken!</h2>
-                <address class="margin-bottom-40"> 
-                    <br>Open an Issue: <a href="https://github.com/ethereumproject/explorer/issues">github</a>
-                    <br> <a href="mailto:elaine.ou@gmail.com">Email bug reports</a>
-                    <br> <a href="https://twitter.com/eiaine">Twit</a>
-                </address>
+
+            <div class="col-xs-12 col-md-3 footer-links align-right" data-ce-key="230">
+              <ul class="row" data-ce-key="231">
+                <li class="col-xs-12 link-head" data-ce-key="232"><b data-ce-key="233">Organization</b></li>
+                <li class="col-xs-12 clickable" data-ce-key="234"><a href="https://marconi.org/team" data-ce-key="235">Team</a></li>
+                <li class="col-xs-12 clickable" data-ce-key="236"><a href="https://marconi.org/privacy" data-ce-key="237">Privacy Policy</a></li>
+                <li class="col-xs-12 clickable" data-ce-key="238"><a href="https://marconi.org/terms" data-ce-key="239">Terms of Service</a></li>
+                <li class="col-xs-12 clickable" data-ce-key="267"><a href="https://marconi.org/career" data-ce-key="268">Careers</a></li>
+              </ul>
+            </div>            
+            
+          </div> 
+          <div class="col-md-2 col-md-pull-10" data-ce-key="260" style="padding:0 "> 
+            <div class="footer-logo pull-left" data-ce-key="261">
+              <a href="index.html" data-ce-key="262">
+  								<img src="img/explorer-logo.svg" alt="" data-ce-key="263">
+  								<div class="copyright" data-ce-key="264">
+  										&copy; 2018 Marconi Foundation
+  								</div>
+                </a>
             </div>
+          </div>
+        <!--footer-box-->
         </div>
-    </div>
-</div>
-<!-- END PRE-FOOTER -->
-<!-- BEGIN POST-FOOTER -->
-<div class="page-footer">
-    <div class="container" ng-bind-html="settings.copyright"></div>
-</div>
+      </div>
+      <!--container-->
+    </section>
+    <!--footer-->
+  </footer>
 <div class="scroll-to-top">
     <i class="icon-arrow-up"></i>
 </div>

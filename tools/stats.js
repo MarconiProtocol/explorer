@@ -3,12 +3,44 @@
 */
 
 var Web3 = require('web3');
+var fs = require('fs');
 
 var mongoose = require( 'mongoose' );
 var BlockStat = require( '../db.js' ).BlockStat;
+/**
+  Start config for node connection and sync
+**/
+var config = {};
+//Look for config.json file if not
+try {
+    var configContents = fs.readFileSync('config.json');
+    config = JSON.parse(configContents);
+    console.log('config.json found.');
+}
+catch (error) {
+  if (error.code === 'ENOENT') {
+      console.log('No config file found.');
+  }
+  else {
+      throw error;
+      process.exit(1);
+  }
+}
+// set the default NODE address to localhost if it's not provided
+if (!('nodeAddr' in config) || !(config.nodeAddr)) {
+  config.nodeAddr = 'localhost'; // default
+}
+// set the default geth port if it's not provided
+if (!('gethPort' in config) || (typeof config.gethPort) !== 'number') {
+  config.gethPort = 8545; // default
+}
+
+console.log('Connecting ' + config.nodeAddr + ':' + config.gethPort + '...');
 
 var updateStats = function(range, interval, rescan) {
-    var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+//var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+// Sets address for RPC WEB3 to connect to, usually your node IP address defaults to localhost
+var web3 = new Web3(new Web3.providers.HttpProvider('http://' + config.nodeAddr + ':' + config.gethPort.toString()));
 
     mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/blockDB');
     mongoose.set('debug', true);

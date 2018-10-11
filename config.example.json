@@ -8,9 +8,9 @@
     "patch":        true,
     "patchBlocks":  100,
     "settings": {
-        "symbol": "ETC",
-        "name": "Ethereum Classic",
-        "title": "Ethereum Classic Block Explorer",
+        "symbol": "MRC",
+        "name": "Marconi",
+        "title": "Marconi Block Explorer",
         "author": "Elaine"
     }
 }

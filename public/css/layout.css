@@ -48,7 +48,7 @@
     margin: 0;
     border: 0;
     padding: 0;
-    height: 126px;
+    height: 119px;
     background-image: none;
 }
 
@@ -81,6 +81,7 @@
     float: left;
     display: block;
     width: 255px;
+    z-index: 99999;
     height: 75px;
     position: absolute;
 }
@@ -89,6 +90,7 @@
     margin: 13px 0 0;
     padding: 0;
     float: right;
+    background-color: #eef4fb;
 }
 
 .page-header .page-header-top .top-menu .navbar-nav {
@@ -103,9 +105,13 @@
     height: 50px;
     display: inline-block;
 }
+.dashboard-stat2 .display .number small{
+font-weight:400;
+color:#888a8a
+} 
 
 .page-header .page-header-top .top-menu .navbar-nav>li.dropdown>.dropdown-toggle {
-    margin: 0 0 0 1px;
+    margin: 0 0 0 1px; 
     padding: 17px 10px 8px;
 }
 
@@ -677,10 +683,14 @@
     font-size: 13px;
     padding-right: 20px;
     font-weight: 300;
+    border:1px solid #979797;
 }
 
 .search-form .input-group .form-control:hover {
     cursor: pointer;
+}
+.search-form .input-group-btn {
+    background-color: #eef4fb;
 }
 
 .search-form .input-group .input-group-btn .btn.submit {
@@ -750,10 +760,10 @@
     }
 
     .page-header .page-header-top .page-logo {
-        width: auto;
+        width: 155px;
         padding: 0;
         margin-right: 10px;
-        margin-left: 4px;
+        margin-left: 16px;
     }
 
     .page-header .page-header-top .top-menu .navbar-nav {
@@ -944,7 +954,7 @@
 
 @media (max-width:767px) {
     .page-header .page-header-top .page-logo {
-        width: auto !important;
+        //width: auto !important;
     }
 
     .page-header .page-header-top .top-menu {
@@ -1066,6 +1076,12 @@
     .page-header .page-header-top .top-menu {
        margin: 33px 3px 0 0;
     }
+
+    .search-form {
+        width: 100%;
+    }
+
+
 }
 
 body,html {
@@ -1173,6 +1189,24 @@ body,html {
     .page-content {
         padding-top: 0;
     }
+
+    .page-header-top .container {
+        min-height: 100px;
+    }
+
+        .top-menu {
+        margin-bottom: 20px !important;
+    }
+
+    .padding-lt {
+        padding-left: 15px !important;
+    }
+
+    .footer-box ul li,
+    .footer-box .col-md-10,
+    .footer-box .footer-links {
+        padding-left: 0px !important;
+    } 
 }
 
 .portlet .portlet-input .form-control {
@@ -1904,4 +1938,12 @@ body,html {
 .page-on-load .page-container,.page-on-load .page-footer,.page-on-load .page-header,.page-on-load .page-prefooter,.page-on-load>.clearfix {
     display: none;
     transition: all 2s;
+}
+.dashboard-stat2 .display .number {
+    color: #474749;
+}
+
+.blue-haze {
+    border: solid 1px #2a4d83;
+    color: #2a4d83;
 }

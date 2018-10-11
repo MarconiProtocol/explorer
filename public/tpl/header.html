@@ -4,17 +4,15 @@
     <!-- BEGIN LOGO -->
     <div class="page-logo">
         <a href="/">
-            <img ng-show="settings.logo" src="{{settings.logo}}" alt="logo" class="logo-default" />
+            <img ng-show="settings.logo" src="img/explorer-logo.svg" alt="logo" class="logo-default" />
         </a>
     </div>
     <!-- END LOGO -->
             <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-        <a href="javascript:;" class="menu-toggler btn btn-sm green-haze btn-outline">MENU</a>
+        <a href="javascript:;" class="menu-toggler btn btn-sm blue-haze btn-outline">MENU</a>
         <!-- END RESPONSIVE MENU TOGGLER -->
         <!-- BEGIN TOP NAVIGATION MENU -->
         <div class="top-menu">
-            <ul class="nav navbar-nav pull-right">
-                <li class="dropdown">
                     <form name="form.searchForm" class="search-form">
                         <div class="input-group">
                             <input type="text" name="explorerSearch" class="form-control" placeholder="Search by Address / Txhash / BlockNum / BlockHash" ng-model="form.searchInput" ng-keyup="$event.keyCode == 13 ? searchQuery(form.searchInput) : null">
@@ -25,10 +23,6 @@
                             </span>
                         </div>
                     </form>
-                </li>
-
-
-            </ul>
         </div>
         <!-- END TOP NAVIGATION MENU -->
     </div>
@@ -42,46 +36,8 @@
         <div class="hor-menu hor-menu-light">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="/">Home</a>
-                </li>
-                <li class="menu-dropdown mega-menu-dropdown ">
-                    <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="/token" class="dropdown-toggle"> Tokens
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" style="min-width: 410px">
-                        <li>
-                            <div class="mega-menu-content">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul class="mega-menu-submenu">
-                                            <li>
-                                                <a href="/token/0x085fb4f24031eaedbc2b611aa528f22343eb52db" class="iconify">
-                                                    <i class="icon-pin"></i> BitEther</a>
-                                            </li>
-                                            <li>
-                                                <a href="/dao" class="iconify">
-                                                    <i class="icon-trash"></i> TheDAO</a>
-                                            </li>
-                                            <li>
-                                                <a href="/token" class="iconify">
-                                                    <i class="icon-puzzle"></i> View All Tokens </a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="mega-menu-submenu">
-                                            <li>
-                                                <a href="/" class="iconify">
-                                                    <i class="icon-paper-clip"></i> View Contracts (N/A)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                    <a href="/">Dashboard</a>
+                </li>                
                 <li class="menu-dropdown mega-menu-dropdown ">
                     <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle"> Stats
                         <i class="fa fa-angle-down"></i>
@@ -96,10 +52,10 @@
                                                 <a href="/stats/hashrate">
                                                     <i class="fa fa-line-chart"></i> HashRate Growth Chart </a>
                                             </li>
-                                            <li>
+                                            <!--<li>
                                                 <a href="/stats/miner_hashrate">
                                                     <i class="fa fa-line-chart"></i> Miner Distribution Chart</a>
-                                            </li>
+                                            </li>-->
                                             <li>
                                                 <a href="/stats/difficulty">
                                                     <i class="fa fa-line-chart"></i> Difficulty Chart</a>
@@ -107,81 +63,17 @@
                                             <li>
                                                 <a href="/stats/blocktime">
                                                     <i class="fa fa-line-chart"></i> Blocktime Chart</a>
-                                            </li>
-                                            <li>
-                                                <a href="/stats/The_bomb_chart">
-                                                    <i class="fa fa-line-chart"></i> The bomb chart</a>
-                                            </li>
+                                            </li>                                            
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                </li>
-                <li class="menu-dropdown classic-menu-dropdown ">
-                    <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Misc
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu pull-left">
-                        <li>
-                            <a href="/">
-                                <i class="icon-check"></i> Verify Contract (N/A)</a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                <i class="icon-refresh"></i>
-                                <span class="title">Broadcast TXN (N/A)</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-dropdown classic-menu-dropdown ">
-                    <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Community
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu pull-left">
-                        <li>
-                          <a href="https://forum.ethereumclassic.org" target="_blank">
-                              <i class="fa fa-group"></i>
-                              <span class="title" data-toggle="tooltip" title="Community Chat"> The Forum</span>
-                          </a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="https://tokenmint.io" target="_blank">
-                                <i class="fa fa-leaf"></i>
-                                <span class="title" data-toggle="tooltip" title="ERC223 Token Factory" > TokenMint.io</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href=" https://ethereumproject.github.io/etherwallet/ " target="_blank">
-                                <i class="fa fa-folder-open"></i>
-                                <span class="title" data-toggle="tooltip" title="Client Side JS ETC Wallet"> ClassicEtherWallet.com</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://classicstats.net" target="_blank">
-                                <i class="fa fa-bar-chart"></i>
-                                <span class="title" data-toggle="tooltip" title="Mainnet Stats"> Live Network Stats </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://statebot.info" target="_blank">
-                                <i class="fa fa-android"></i>
-                                <span class="title" data-toggle="tooltip" title="JSON state dumps for analysis"> Statebot.io </span>
-                            </a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a href="http://teststats.epool.io/" target="_blank">
-                                <i class="fa fa-bar-chart"></i>
-                                <span class="title" data-toggle="tooltip" title="Live Testnet Stats">Morden network stats </span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
+                </li>                
+ <li>
+                    <a href="https://marconi.org">Marconi Protocol</a>
+                </li>  
             </ul>
         </div>
         <!-- END MEGA MENU -->
